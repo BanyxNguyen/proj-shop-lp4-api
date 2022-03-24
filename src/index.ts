@@ -2,6 +2,9 @@ import {ApplicationConfig, PrjShopApplication} from './application';
 
 export * from './application';
 
+// Addition of dotenv for access to process.env (environment variables)
+const dotenv = require('dotenv').config();
+
 export async function main(options: ApplicationConfig = {}) {
   const app = new PrjShopApplication(options);
   await app.boot();

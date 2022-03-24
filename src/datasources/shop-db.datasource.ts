@@ -5,11 +5,11 @@ const config = {
   name: 'ShopDB',
   connector: 'mongodb',
   url: '',
-  host: 'localhost',
-  port: 27017,
+  host: process.env.DATABASE_HOST,
+  port: process.env.DATABASE_PORT,
   user: '',
   password: '',
-  database: 'Shop',
+  database: process.env.DATABASE_NAME,
   useNewUrlParser: true,
 };
 
