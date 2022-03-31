@@ -3,14 +3,14 @@ import {juggler} from '@loopback/repository';
 
 const config = {
   name: 'ShopDB',
-  connector: 'mongodb',
+  connector: 'mssql',
   url: '',
-  host: process.env.DATABASE_HOST,
-  port: process.env.DATABASE_PORT,
-  user: '',
-  password: '',
-  database: process.env.DATABASE_NAME,
-  useNewUrlParser: true,
+  host: 'localhost',
+  port: 1433,
+  user: 'sa',
+  password: 'sa',
+  // database: 'StoreGreen',
+  database: 'DBTESTLOGIN',
 };
 
 // Observe application's life cycle to disconnect the datasource when

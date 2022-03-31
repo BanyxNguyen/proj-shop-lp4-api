@@ -49,6 +49,8 @@
     "!*/__tests__"
   ],
   "dependencies": {
+    "@loopback/authentication": "^8.1.1",
+    "@loopback/authentication-jwt": "^0.11.1",
     "@loopback/boot": "^4.1.1",
     "@loopback/core": "^3.1.1",
     "@loopback/repository": "^4.1.1",
@@ -56,7 +58,9 @@
     "@loopback/rest-explorer": "^4.1.1",
     "@loopback/service-proxy": "^4.1.1",
     "dotenv": "^16.0.0",
+    "lodash": "^4.17.21",
     "loopback-connector-mongodb": "^6.1.0",
+    "loopback-connector-mssql": "^3.8.0",
     "tslib": "^2.0.0"
   },
   "devDependencies": {
