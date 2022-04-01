@@ -1,17 +1,20 @@
 import {AuthenticationComponent} from '@loopback/authentication';
-import {JWTAuthenticationComponent, UserServiceBindings} from '@loopback/authentication-jwt';
+import {
+  JWTAuthenticationComponent,
+  UserServiceBindings,
+} from '@loopback/authentication-jwt';
 import {BootMixin} from '@loopback/boot';
 import {ApplicationConfig} from '@loopback/core';
 import {RepositoryMixin} from '@loopback/repository';
 import {RestApplication} from '@loopback/rest';
 import {
   RestExplorerBindings,
-  RestExplorerComponent
+  RestExplorerComponent,
 } from '@loopback/rest-explorer';
 import {ServiceMixin} from '@loopback/service-proxy';
 import path from 'path';
 import {ShopDbDataSource} from './datasources';
-import {MySequence} from './sequence';
+import {MyAuthenticationSequence} from './sequence';
 
 export {ApplicationConfig};
 
@@ -22,7 +25,7 @@ export class PrjShopApplication extends BootMixin(
     super(options);
 
     // Set up the custom sequence
-    this.sequence(MySequence);
+    this.sequence(MyAuthenticationSequence);
 
     // Set up default home page
     this.static('/', path.join(__dirname, '../public'));
